@@ -1,12 +1,14 @@
 import SideBar from "./components.jsx/Sidebar";
 import NewProject from "./components.jsx/NewProject";
+import NoProjectSelected from "./components.jsx/NoProjectSelected";
 
 function App() {
   return (
-    <main>
-      <h1 className="header">Hello World</h1>
+    <main className="container">
+      <h1>Project Manager</h1>
       <SideBar />
-      <NewProject />
+      {/* <NewProject /> */}
+      <NoProjectSelected />
     </main>
   );
 }
