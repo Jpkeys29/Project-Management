@@ -1,9 +1,10 @@
 import Input from "./Input"
 
 export default function NewProject() {
-    return <div>
+    return (
+    <div>
         <menu>
-            <li><button>Cancel</button></li>
+            <ul><button>Cancel</button></ul>
             <li><button>Save</button></li>
         </menu>
         <div>
@@ -12,4 +13,5 @@ export default function NewProject() {
             <Input label="Due Date" />
         </div>
     </div>
+    );
 }
