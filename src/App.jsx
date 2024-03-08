@@ -21,9 +21,9 @@ function handleStartAddProject() {
   return (
     <main className="container">
       <h1>Project Manager</h1>
-      <SideBar />
+      <SideBar onStartAddProject={handleStartAddProject} />
       {/* <NewProject /> */}
-      <NoProjectSelected />
+      <NoProjectSelected onStartAddProject={handleStartAddProject}/>
     </main>
   );
 }
