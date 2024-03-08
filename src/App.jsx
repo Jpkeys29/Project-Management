@@ -9,7 +9,14 @@ function App() {
     projects: []
   })
 
-  
+function handleStartAddProject() {
+  setProjectState(prevState => {
+    return {
+      ...prevState,
+      selectedProjectId: null,
+    }
+  });
+}  
 
   return (
     <main className="container">
