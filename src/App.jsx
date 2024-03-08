@@ -18,12 +18,19 @@ function handleStartAddProject() {
   });
 }  
 
+let content;
+
+if(projectState.selectedProjectId === null) {
+  content = <NewProject />
+} else if (projectState.selectedProjectId === undefined) {
+  content = <NoProjectSelected onStartAddProject={handleStartAddProject} />;
+}
+
   return (
     <main className="container">
       <h1>Project Manager</h1>
       <SideBar onStartAddProject={handleStartAddProject} />
-      {/* <NewProject /> */}
-      <NoProjectSelected onStartAddProject={handleStartAddProject}/>
+      {content}
     </main>
   );
 }
