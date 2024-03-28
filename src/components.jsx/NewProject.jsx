@@ -1,6 +1,11 @@
 import Input from "./Input"
+import { useRef } from "react";
 
 export default function NewProject() {
+    const title = useRef();
+    const description = useRef();
+    const dueDate = useRef();
+    
     return (
     <div>
         <menu>
